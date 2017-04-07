@@ -1,15 +1,11 @@
 #include <iostream>
+#include <cstdlib>
 #include "List2.h"
 
 using namespace std;
 
-void Node::printNode(){
-
-    cout<<data<<endl;
-
-}
 int main()
 {
-    cout << "Hello world!" << endl;
+    system("pause");
     return 0;
 }
