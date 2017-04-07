@@ -1,34 +1,33 @@
-#ifndef NODE_H
-#define NODE_H
+#ifndef LIST_H
+#define LIST_H
 #include "Node.h"
 
 class List{
 
 private:
-
-    int* m_pList;
+    Node* m_pList;
     int m_length;
 
 
 public:
     List();
-    ~List();    //°üÀ¨Í·½Úµã£¬ÊÍ·Å
+    ~List();    //åŒ…æ‹¬å¤´èŠ‚ç‚¹ï¼Œé‡Šæ”¾
 //    void deleteList();
-    void clearList();   //³ýÁËÍ·½Úµã,ÊÍ·Å
+    void clearList();   //é™¤äº†å¤´èŠ‚ç‚¹,é‡Šæ”¾
     void listTraverse();
     bool listEmpty();
     bool initList();
-    bool getElem(int i, int* e);
-    bool priorElem(int* currentElem, int* preElem);
-    bool nextElem(int* currentElem, int* nextElem);
-    bool listInsert(int i, int* e);
-    bool listDelete(int i, int* e);
+    bool getElem(int i, Node* pNode);
+    bool priorElem(Node* currentNode, Node* preNode);
+    bool nextElem(Node* currentNode, Node* nextNode);
+    bool listInsert(int i, Node* pNode);
+    bool listDelete(int i, Node* pNode);
     bool listInsertHead(Node* pNode);
     bool listInsertTail(Node* pNode);
     int listLength();
-    int locateElem(int*e);
+    int locateElem(Node* pNode);
 };
 
 
 
-#endif // NODE_H
+#endif // LIST_H
